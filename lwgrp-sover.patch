@@ -1,0 +1,8 @@
+--- lwgrp-1.0.2/src/Makefile.am~	2014-01-13 20:20:06.000000000 +0000
++++ lwgrp-1.0.2/src/Makefile.am	2017-09-20 16:01:18.916796232 +0100
+@@ -30,4 +30,4 @@
+   lwgrp_comm_split.c
+ liblwgrp_la_CFLAGS = $(INCLUDES)
+ liblwgrp_la_LIBADD =
+-liblwgrp_la_LDFLAGS = -avoid-version
++liblwgrp_la_LDFLAGS = -version-info 0:0:0
