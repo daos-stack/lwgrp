@@ -36,8 +36,8 @@
 %endif
 
 Name:		lwgrp
-Version:	1.0.2
-Release:	3.2%{?dist}
+Version:	1.0.3
+Release:	1%{?dist}
 Summary:	Light-weight Group Library for MPI process groups 
 
 License:	BSD
@@ -177,6 +177,9 @@ done
 %endif
 
 %changelog
+* Thu Feb 04 2021 Dalton A. Bohning <daltonx.bohning@intel.com> - 1.0.3-1
+- Update to version 1.0.3
+
 * Mon Sep 28 2020 Brian J. Murrell <brian.murrell@intel.com> - 1.0.2-3.2
 - Package for multiple MPI stacks and multiple distros
 
