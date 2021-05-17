@@ -172,9 +172,6 @@ done
 %files openmpi
 %license LICENSE.TXT
 %doc README
-%if (0%{?suse_version} >= 1500)
-%files -n liblwgrp0-openmpi
-%endif
 %{mpi_libdir}/openmpi/%{mpi_lib_ext}/liblwgrp.so.*
 
 %files openmpi-devel
