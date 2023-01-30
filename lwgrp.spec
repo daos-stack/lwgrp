@@ -36,13 +36,13 @@
 %else
 %global mpi_libdir %{_libdir}
 %global mpi_lib_ext lib
-%global mpi_includedir  %{_includedir}
+%global	mpi_includedir	%{_includedir}
 %global mpi_include_ext -%{_arch}
 %endif
 
-Name:		lwgrp
-Version:	1.0.3
-Release:	2%{?dist}
+Name:			lwgrp
+Version:  1.0.5
+Release:  1%{?dist}
 Summary:	Light-weight Group Library for MPI process groups 
 
 License:	BSD
@@ -70,6 +70,9 @@ communicators during the sort routine.
 %package openmpi
 Summary: Light-weight Group Library for MPI process groups
 BuildRequires: openmpi-devel
+%if (0%{?suse_version} >= 1500)
+BuildArch: noarch
+%endif
 
 %description openmpi
 The light-weight group library defines data structures and collective
@@ -116,6 +119,9 @@ Development files for %{name}-openmpi3.
 %package mpich
 Summary: Light-weight Group Library for MPI process groups
 BuildRequires: mpich-devel
+%if (0%{?suse_version} >= 1500)
+BuildArch: noarch
+%endif
 
 %description mpich
 The light-weight group library defines data structures and collective
@@ -211,6 +217,10 @@ done
 %endif
 
 %changelog
+* Tue Jul 04 2023 Brian J. Murrell <brian.murrell@intel.com> - 1.0.5-1
+- Update to version 1.0.5
+- Set base MPI packages to noarch on SUSE 
+
 * Mon May 17 2021 Brian J. Murrell <brian.murrell@intel.com> - 1.0.3-2
 - Package for openmpi on EL8
 
