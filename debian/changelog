@@ -1,0 +1,5 @@
+lwgrp (1.0.5-1) focal; urgency=medium
+
+  * Initial packaging
+
+ -- Brian J. Murrell <brian.murrell@intel.com>  Wed, 01 Feb 2023 11:43:17 -0500

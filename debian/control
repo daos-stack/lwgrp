@@ -1,0 +1,42 @@
+Source: lwgrp
+Maintainer: DAOS <daos@daos.io>
+Uploaders: Brian J. Murrell <brian.murrell@intel.com>
+Section: devel
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               libmpich-dev
+Standards-Version: 4.4.1.0
+Vcs-Browser: https://github.com/LLNL/lwgrp
+Vcs-Git: https://github.com/LLNL/lwgrp.git
+Homepage: https://github.com/LLNL/lwgrp.git
+
+Package: liblwgrp0-mpich
+Architecture: linux-any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: The light-weight group library defines data structures and collective
+ operations to group MPI processes as an ordered set.  Such groups are
+ useful as substitutes for MPI communicators when the overhead of
+ communicator creation is too costly.  For example, certain sorting
+ algorithms recursively divide processes into subgroups as the sort
+ algorithm progresses.  These groups may be different with each
+ invocation, so that it is inefficient to create and destroy
+ communicators during the sort routine.
+ .
+ This package contains the shared libraries for use with MPICH2.
+
+Package: liblwgrp-mpich-dev
+Section: libdevel
+Architecture: linux-any
+Depends: liblwgrp0-mpich (= ${binary:Version}), ${misc:Depends}
+Description: Development files for liblwgrp0-mpich
+ The light-weight group library defines data structures and collective
+ operations to group MPI processes as an ordered set.  Such groups are
+ useful as substitutes for MPI communicators when the overhead of
+ communicator creation is too costly.  For example, certain sorting
+ algorithms recursively divide processes into subgroups as the sort
+ algorithm progresses.  These groups may be different with each
+ invocation, so that it is inefficient to create and destroy
+ communicators during the sort routine.
+ .
+ This package is needed to compile programs against liblwgrp0-mpich.
+ It contains the header files and links needed for compiling.
