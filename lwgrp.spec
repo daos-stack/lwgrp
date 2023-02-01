@@ -70,6 +70,9 @@ communicators during the sort routine.
 %package openmpi
 Summary: Light-weight Group Library for MPI process groups
 BuildRequires: openmpi-devel
+%if (0%{?suse_version} >= 1500)
+BuildArch: noarch
+%endif
 
 %description openmpi
 The light-weight group library defines data structures and collective
@@ -116,6 +119,9 @@ Development files for %{name}-openmpi3.
 %package mpich
 Summary: Light-weight Group Library for MPI process groups
 BuildRequires: mpich-devel
+%if (0%{?suse_version} >= 1500)
+BuildArch: noarch
+%endif
 
 %description mpich
 The light-weight group library defines data structures and collective
@@ -213,6 +219,7 @@ done
 %changelog
 * Wed Feb  1 2023 Brian J. Murrell <brian.murrell@intel.com> - 1.0.5-1
 - Update to version 1.0.5
+- Set base MPI packages to noarch on SUSE 
 
 * Mon May 17 2021 Brian J. Murrell <brian.murrell@intel.com> - 1.0.3-2
 - Package for openmpi on EL8
