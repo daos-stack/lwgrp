@@ -1,0 +1,5 @@
+# This line is mandatory to access the configuration functions
+from Config import *
+
+addFilter('lwgrp-openmpi3\.x86_64: E: no-binary')
+addFilter('lwgrp\.spec:156: W: configure-without-libdir-spec')
